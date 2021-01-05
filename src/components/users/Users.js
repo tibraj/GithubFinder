@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import UserItem from './UserItem';
 
-export default class Users extends Component {
+class Users extends Component {
     state = {
         users: []
     }
