@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 
 export default class UserItem extends Component {
+
     render() {
         return (
-            <div>
+            <div className="card text-center">
                 UserItem
             </div>
         )
