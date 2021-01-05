@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const NavBar = ({icon, title}) => {
     return (
-        <nav class="navbar bg-primary">
+        <nav className="navbar bg-primary">
             <h1>
                 <i className={icon} /> {title}
             </h1>
@@ -18,7 +18,7 @@ NavBar.defaultProps = {
 
 NavBar.propTypes = {
     title: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequires,
+    icon: PropTypes.string.isRequired,
 }
 
 export default NavBar

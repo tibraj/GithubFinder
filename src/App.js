@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import Navbar from './components/layout/NavBar';
 import Users from './components/users/Users';
+import axios from 'axios';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    axios.get('https://api.github.com/users').then(response => console.log(response.data));
+  }
   render() {
     return (
       <div className="App">
