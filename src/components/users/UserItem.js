@@ -10,3 +10,5 @@ export default class UserItem extends Component {
         )
     }
 }
+
+export default UserItem;
