@@ -25,7 +25,7 @@ class App extends Component {
       <div className="App">
         <Navbar title="Github Finder"/>
         <div className="container">
-          <Search searchUsers={this.searchUsers}/>
+          <Search searchUsers={this.searchUsers} clearUsers={this.clearUsers}/>
           <Users loading={this.state.loading} users={this.state.users}/>
         </div>
       </div>
