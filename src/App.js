@@ -8,7 +8,8 @@ import './App.css';
 class App extends Component {
   state = {
     users: [], 
-    loading: false
+    loading: false,
+    alert: null
   }
   async componentDidMount() {
     this.setState({loading: true});
@@ -20,6 +21,9 @@ class App extends Component {
     this.setState({users: res.data.items, loading: false});
   };
   clearUsers = () => this.setState({users: [], loading: false});
+  setAlert = (message, type) => {
+    this.setState({alert: {message: message, type: type}});
+  }
 
   render() {
     const { users, loading } = this.state;
@@ -27,7 +31,12 @@ class App extends Component {
       <div className="App">
         <Navbar title="Github Finder"/>
         <div className="container">
-          <Search searchUsers={this.searchUsers} clearUsers={this.clearUsers} showClear={users.length > 0 ? true : false}/>
+          <Search 
+            searchUsers={this.searchUsers} 
+            clearUsers={this.clearUsers} 
+            showClear={users.length > 0 ? true : false}
+            setAlert={this.setAlert}
+            />
           <Users loading={loading} users={users}/>
         </div>
       </div>
