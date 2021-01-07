@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom' 
 import Navbar from './components/layout/NavBar';
 import Users from './components/users/Users';
 import Search from './components/users/Search';
