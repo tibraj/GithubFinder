@@ -19,6 +19,7 @@ class App extends Component {
     const res = await axios.get(`https://api.github.com/users?q=${text}`);
     this.setState({users: res.data.items, loading: false});
   };
+  clearUsers = () => this.setState({users: [], loading: false});
 
   render() {
     return (
